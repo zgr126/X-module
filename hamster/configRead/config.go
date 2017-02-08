@@ -1,4 +1,4 @@
-package hamster
+package configRead
 
 import (
 	"encoding/json"

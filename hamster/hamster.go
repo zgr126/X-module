@@ -2,16 +2,24 @@ package hamster
 
 import (
 	"github.com/satori/go.uuid"
-	"x-module/manager"
 )
 
 type Hamster struct {
-	Name string
-	uuid string
+	Hname string
+	Huuid string
+	Htype string
 }
 
-func NewHamster() {
-	hamster = new(Hamster)
-	Hamster.uuid = uuid.NewV1().String()
+func NewHamster() (h *Hamster) {
+	hamster := new(Hamster)
+	hamster.Huuid = uuid.NewV1().String()
 	return hamster
+}
+
+func (h *Hamster) Input(data interface{}) {
+
+}
+
+func (h *Hamster) Output() (data interface{}) {
+	return ""
 }

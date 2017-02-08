@@ -5,7 +5,7 @@ import (
 	"x-module/hamster"
 )
 
-type hamster hamster.Hamster
+type module hamster.Hamster
 
 func InitManager() {
 	log.Print("...")
