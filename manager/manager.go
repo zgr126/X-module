@@ -14,7 +14,6 @@ func InitManager() {
 }
 
 func NewModule(name string, relyLst []string) {
-	relyLst()
 	m := hamster.NewModule(name, relyLst)
 }
 func CheckRely(m *module) {
