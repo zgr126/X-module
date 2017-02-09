@@ -2,7 +2,7 @@ package xmodule
 
 import (
 	"fmt"
-	"x-module/hamster"
+	//"x-module/hamster"
 	"x-module/manager"
 )
 

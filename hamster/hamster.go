@@ -25,7 +25,7 @@ func NewModule(name string, relyLst []string) (h *Hamster) {
 	hamster.Hname = name
 	hamster.HrelyLst = relyLst
 	// if hamster has no rely, type is base hamster
-	if len(relyLst) {
+	if len(relyLst) == 0 {
 		hamster.Htype = "base"
 	}
 	return hamster

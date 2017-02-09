@@ -1,13 +1,12 @@
 package manager
 
 import (
+	//"fmt"
 	"log"
 	"x-module/hamster"
 )
 
-type module hamster.Hamster
-
-var moduleLst []module
+var moduleLst = []*hamster.Hamster{}
 
 func InitManager() {
 	log.Print("...")
@@ -15,8 +14,9 @@ func InitManager() {
 
 func NewModule(name string, relyLst []string) {
 	m := hamster.NewModule(name, relyLst)
+	moduleLst = append(moduleLst, m)
 }
-func CheckRely(m *module) {
+func CheckRely(m *hamster.Hamster) bool {
 	nameLst := GetModuleNames()
 	for _, name := range nameLst {
 		if m.Hname == name {
@@ -31,9 +31,10 @@ func GetModule(str string) {
 }
 
 func GetModuleNames() (nameLst []string) {
-	nameLst = nameLst[:len(moduleLst)]
+	nameLst = make([]string, len(moduleLst))
 	for i, m := range moduleLst {
-		name[i] = m.Hname
+		//fmt.Print(nameLst)
+		nameLst[i] = m.Hname
 	}
 	return nameLst
 }
