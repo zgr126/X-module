@@ -30,3 +30,11 @@ func NewModule(name string, relyLst []string) (h *Hamster) {
 	}
 	return hamster
 }
+
+func GetModuleName(m *Hamster) (Hname string) {
+	return m.Hname
+}
+
+func GetModuleRelyLst(m *Hamster) (HrelyLst []string) {
+	return m.HrelyLst
+}
