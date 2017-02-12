@@ -1,4 +1,4 @@
-package manager
+package xmodule
 
 import (
 	//"fmt"
@@ -22,6 +22,7 @@ func AddModuleToManage(m *hamster.Hamster) {
 	moduleLst = append(moduleLst, m)
 	moduleNames = append(moduleNames, hamster.GetModuleName(m))
 }
+
 func CheckAllModuleRely() {
 	checkLst := make(map[string][]string)
 	for _, m := range moduleLst {
