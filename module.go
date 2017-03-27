@@ -2,10 +2,27 @@ package xmodule
 
 import (
 	"log"
+	"time"
 )
 
 type module struct {
-	//xmodule.ModuleManage
+	particle
+}
+
+// inject instance function struct
+type particle struct {
+	pTime time.Time
+}
+
+// Insert particle
+func (p *particle) Insert () (particle) {
+	p.pTime = time.Now()
+	return p
+}
+
+// remove particle
+func (p *particle) Remove (pr particle)  {
+	log.Print(pr.pTime.Nanosecond())
 }
 
 // new module struct
